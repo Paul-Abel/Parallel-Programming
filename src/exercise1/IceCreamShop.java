@@ -1,17 +1,19 @@
+package exercise1;
+
 import java.util.*;
 
 class IceCreamShop {
     private final int numSeats = 12;
     private int numCustomers = 0;
     private final Thread[] service = new Thread[4];
-    private List<String> seats = new ArrayList<>(numSeats);
-    private static Queue<String> waitingOutside = new LinkedList<>();
-    private static Queue<String> waitingOrder = new LinkedList<>();
-    private Random random = new Random();
+    private final List<String> seats = new ArrayList<>(numSeats);
+    private static final Queue<String> waitingOutside = new LinkedList<>();
+    private static final Queue<String> waitingOrder = new LinkedList<>();
+    private final Random random = new Random();
 
 
     public IceCreamShop() {
-        //When IceCreamShop is initialized, the service get defined, so every Shop has his own service
+        //When exercise1.IceCreamShop is initialized, the service get defined, so every Shop has his own service
         service[0] = new Thread(new Service("Alex", this));
         service[0].start();
         service[1] = new Thread(new Service("Rabia", this));

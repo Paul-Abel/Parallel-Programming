@@ -1,3 +1,5 @@
+package exercise1;
+
 public class IceCreamSimulation {
     public static void main(String[] args) {
         IceCreamShop shop = new IceCreamShop();

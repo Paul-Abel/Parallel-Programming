@@ -1,3 +1,5 @@
+package exercise1;
+
 import java.util.Random;
 
 class Customer implements Runnable {

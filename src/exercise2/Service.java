@@ -1,4 +1,4 @@
-
+package exercise2;
 
 public class Service implements Runnable {
     private final String name;
